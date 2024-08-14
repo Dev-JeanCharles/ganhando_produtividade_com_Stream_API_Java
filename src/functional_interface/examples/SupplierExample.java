@@ -14,7 +14,7 @@ public class SupplierExample {
     Supplier<String> saudacao = () -> "Olá, seja bem-vindo(a)!";
 
     // Usar o Supplier para obter uma lista com 5 saudações
-    List<String> listaSaudacoes = Stream.generate(saudacao)
+    List<String> listaSaudacoes = Stream.generate(() -> "Olá, seja bem-vindo(a)!")
         .limit(5)
         .toList();
 
